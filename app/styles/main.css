@@ -20,6 +20,28 @@ input[type="range"] {
 	font-weight: bolder;
 }
 
-.register1-content {
-	background-image:url("images/home-background.jpg");
+/* 
+ * Containers
+**/
+.container {
+	-o-background-size:100% auto;
+	-webkit-background-size:100% auto;
+	-moz-background-size:100% auto;
+	background-size:100% auto;
+}
+.container-first-time {
+	background-image:url('images/fondo.png');
+}
+.container-register-merchant {
+	background-image:url('images/home-background.jpg');
+}
+.list-group-item {
+	border:none;
+	background:none;
+}
+
+.profile-picture {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

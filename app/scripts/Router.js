@@ -6,19 +6,23 @@ define(function(require) {
 		Backbone = require('backbone'),
 		HomeView = require('views/HomeView'),
 		StatsView = require('views/StatsView'),
-		Register1View = require('views/Register1View')
+		FirstTimeHomeView = require('views/FirstTimeHomeView'),
+		RegisterMerchantView = require('views/RegisterMerchantView')
 		;
 
 	return Backbone.Router.extend({
 		routes: {
-			'': 'home',
-			'stats': 'stats'
+			'':'home',
+			'register-merchant': 'registerMerchant',
+			'register-buyer': 'registerBuyer'
 		},
+		
 		home: function() {
+			//TODO: replace by a real 'firstTime' registry
 			var firtTime = true;
 			if(firtTime) {
-				var register1View = new Register1View();
-				register1View.render();	
+				var firstTimeHomeView = new FirstTimeHomeView();
+				firstTimeHomeView.render();	
 			}
 			else {
 				var homeView = new HomeView();
@@ -26,8 +30,12 @@ define(function(require) {
 			}
 			
 		},
+		registerMerchant: function() {
+			var registerMerchantView = new RegisterMerchantView();
+			registerMerchantView.render();
+		},
 
-		stats: function() {
+		registerBuyer: function() {
 			var statsView = new StatsView();
 			statsView.render();
 		}
