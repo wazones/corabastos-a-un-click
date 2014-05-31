@@ -83,6 +83,7 @@ module.exports = function(grunt) {
                         return [
                             connect.static('.tmp'),
                             connect().use('/bower_components', connect.static('./bower_components')),
+                            connect().use('/images', connect.static('./images')),
                             connect.static(config.app)
                         ];
                     }
@@ -162,14 +163,6 @@ module.exports = function(grunt) {
                     src: '{,*/}*.css',
                     dest: '.tmp/styles/'
                 }]
-            }
-        },
-
-        // Automatically inject Bower components into the HTML file
-        bowerInstall: {
-            app: {
-                src: ['<%= config.app %>/index.html'],
-                exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
             }
         },
 

@@ -12,14 +12,14 @@ input[type="range"] {
 	text-decoration: underline;
 }
 
-.main-question {
-	font-size: 4rem;
-}
-
 .emoticon {
 	transform:rotateZ(90deg);
 	ms-transform:rotateZ(90deg);
 	-webkit-transform: rotateZ(90deg);
 	text-align: center;
 	font-weight: bolder;
+}
+
+.register1-content {
+	background-image:url("images/home-background.jpg");
 }
