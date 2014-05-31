@@ -1,0 +1,25 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+input[type="range"] {
+	width:100%;
+}
+
+.tab-selected {
+	text-decoration: underline;
+}
+
+.main-question {
+	font-size: 4rem;
+}
+
+.emoticon {
+	transform:rotateZ(90deg);
+	ms-transform:rotateZ(90deg);
+	-webkit-transform: rotateZ(90deg);
+	text-align: center;
+	font-weight: bolder;
+}
