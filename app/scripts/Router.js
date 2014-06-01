@@ -10,7 +10,9 @@ define(function(require) {
 		RegisterMerchantView = require('views/RegisterMerchantView'),
 		RegisterBuyerView = require('views/RegisterBuyerView'),
 		LocalFormView = require('views/LocalFormView'),
-		NewBuyerView = require('views/NewBuyerView');
+		NewBuyerView = require('views/NewBuyerView'),
+		MarketDemoView = require('views/MarketDemoView')
+		;
 
 	return Backbone.Router.extend({
 		routes: {
@@ -18,7 +20,8 @@ define(function(require) {
 			'register-merchant': 'registerMerchant',
 			'locals/new':'newLocal',
 			'buyers/register':'registerBuyer',
-			'buyers/new':'newBuyer'
+			'buyers/new':'newBuyer',
+			'market/demo': 'marketDemo'
 		},		
 		
 		home: function() {
@@ -52,6 +55,11 @@ define(function(require) {
 		newBuyer: function() {
 			var newBuyerView = new NewBuyerView();
 			newBuyerView.render();
+		},
+
+		marketDemo: function() {
+			var marketDemoView = new MarketDemoView();
+			marketDemoView.render();	
 		}
 
 	});

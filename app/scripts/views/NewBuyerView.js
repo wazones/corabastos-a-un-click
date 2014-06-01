@@ -30,7 +30,8 @@ define(function(require) {
 		},
 
 		events: {
-			'click .button-logout': 'logout'
+			'click .button-logout': 'logout',
+			'click .button-demo': 'demo'
 		},
 
 		logout: function() {
@@ -38,6 +39,13 @@ define(function(require) {
 			require(['app'],function(app){
 				var router = app.getRouter();
 				router.navigate('buyers/register', {trigger: true});
+			});
+		},
+
+		demo: function() {
+			require(['app'],function(app){
+				var router = app.getRouter();
+				router.navigate('market/demo', {trigger: true});
 			});
 		}
 	});

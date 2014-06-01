@@ -55,3 +55,28 @@ input[type="range"] {
 .center-text {
 	text-align: center;
 }
+
+.background2 {
+	background-image:url('images/fondo2.png');
+	height: 1280px;
+}
+
+.background3 {
+	background-image:url('images/destacados.png');
+	background-repeat: no-repeat;
+	height: 400px;
+}
+
+.super-container {
+	position: relative;
+}
+
+.cosa {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    padding-right: 70px;
+    z-index: 10;
+}

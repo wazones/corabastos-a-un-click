@@ -17,7 +17,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"container container-local-form\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<h1>Registro de local</h1>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"form-group\">\r\n				<label>Número de local</label>\r\n				<input type=\"number\" class=\"form-control local-number\" placeholder=\"Ingrese el número de local\" val=\"";
+  buffer += "<div class=\"container container-local-form background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<h1>Registro de local</h1>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"form-group\">\r\n				<label>Número de local</label>\r\n				<input type=\"number\" class=\"form-control local-number\" placeholder=\"Ingrese el número de local\" val=\"";
   if (helper = helpers.localNumber) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.localNumber); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -29,13 +29,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["JST"]["navbar"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["marketDemo"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"bar bar-header bar-calm tabs\">\r\n  <a class=\"tab-item tab-selected\" data-name=\"home\" href=\"#/\">\r\n    <i class=\"icon ion-compose\"> Log</i>\r\n  </a>\r\n  <a class=\"tab-item\" data-name=\"stats\" href=\"#/stats\">\r\n    <i class=\"icon ion-stats-bars\"> Stats</i>\r\n  </a>\r\n</div>";
+  return "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/bienvenida.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"container background3 super-container\">\r\n				<div class=\"cosa row\">\r\n					<img src=\"images/tipos.png\" class=\"img-responsive\"/>\r\n				</div>\r\n				<div class=\"cosa row\">\r\n					<div class=\"col-xs-4\">\r\n						XX\r\n					</div>\r\n					<div class=\"col-xs-4\">\r\n						YY\r\n					</div>\r\n					<div class=\"col-xs-4\">\r\n						ZZ\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<label>Agregar Local</label>\r\n				<br/>\r\n				<br/>\r\n				<a href=\"#/locals/new\" class=\"\">\r\n				<span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\r\n				</a>\r\n			</div>\r\n		</li>\r\n	</ul>\r\n</div>";
   });
 
 this["JST"]["newBuyer"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -44,7 +44,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"container container-register-merchant\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"";
+  buffer += "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"";
   if (helper = helpers.profileImageUrl) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.profileImageUrl); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -56,7 +56,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.lastName) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.lastName); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "!</h2>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<h3>Muy pronto podras disfrutar de AppBastésete :D</h3>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item center-text\">\r\n			<button type=\"button\" class=\"btn btn-danger button-logout\">Cambiar de usuario</button>\r\n		</li>\r\n	</ul>\r\n</div>";
+    + "!</h2>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<h3>Muy pronto podras disfrutar de AppBastésete :D</h3>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item center-text\">\r\n			<button type=\"button\" class=\"btn btn-success button-demo\">Demo</button>\r\n		</li>\r\n		<li class=\"list-group-item center-text\">\r\n			<button type=\"button\" class=\"btn btn-danger button-logout\">Cambiar de usuario</button>\r\n		</li>\r\n	</ul>\r\n</div>";
   return buffer;
   });
 
@@ -87,7 +87,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\"></li>\r\n		<li class=\"list-group-item facebook-login\">\r\n			<img src=\"images/login-with-facebook.png\" class=\"img-responsive\"/>\r\n		</li>\r\n	</ul>\r\n</div>";
+  return "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\"></li>\r\n		<li class=\"list-group-item facebook-login\">\r\n			<img src=\"images/login-with-facebook.png\" class=\"img-responsive\"/>\r\n		</li>\r\n	</ul>\r\n</div>";
   });
 
 this["JST"]["registerMerchant"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -110,7 +110,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"container container-register-merchant\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<form role=\"form\">\r\n				<div class=\"form-group\">\r\n					<label>Nombre de usuario</label>\r\n					<input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\r\n				</div>\r\n			</form>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<label>Agregar Local</label>\r\n				<br/>\r\n				<br/>\r\n				<a href=\"#/locals/new\" class=\"\">\r\n				<span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\r\n				</a>\r\n			</div>\r\n		</li>\r\n		";
+  buffer += "<div class=\"container container-register-merchant background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<form role=\"form\">\r\n				<div class=\"form-group\">\r\n					<label>Nombre de usuario</label>\r\n					<input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\r\n				</div>\r\n			</form>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<label>Agregar Local</label>\r\n				<br/>\r\n				<br/>\r\n				<a href=\"#/locals/new\" class=\"\">\r\n				<span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\r\n				</a>\r\n			</div>\r\n		</li>\r\n		";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.locals), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\r\n	</ul>\r\n</div>";

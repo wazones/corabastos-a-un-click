@@ -12,8 +12,14 @@ define(function(require){
 		findProducts = function(query) {
 			var deferred = $.Deferred();
 			if(query) {
-				var result = _.filter(products,function(p){
-					return p.name.match(query);
+				var queryUpperCase = query.toLocaleUpperCase();
+				var queryLength = query.length;
+				var result = _.filter(products,function(p) {
+					var tokens = p.name.split(' ');
+					var res = _.find(tokens,function(t){
+						return queryUpperCase == t.substring(0,queryLength).toLocaleUpperCase();
+					});
+					return res;
 				});
 				deferred.resolve(result);
 			}
