@@ -75,7 +75,18 @@ module.exports = function(grunt) {
                 open: true,
                 livereload: 35729,
                 // Change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: 'localhost',
+                middleware: function(connect,options) {
+                    return [
+
+                        function(req, res, next) {
+                            res.setHeader('Access-Control-Allow-Origin', '*');
+                            res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+                            res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+                            return next();
+                        }
+                    ];
+                }
             },
             livereload: {
                 options: {

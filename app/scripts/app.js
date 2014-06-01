@@ -3,7 +3,6 @@ define(function(require) {
 	'use strict';
 
 	var Router = require('Router'),
-		NavbarView = require('views/NavbarView'),
 		Backbone = require('backbone'),
 		$ = require('jquery'),
 		openFB = require('openFB'),

@@ -17,11 +17,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"container container-local-form background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<h1>Registro de local</h1>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"form-group\">\r\n				<label>Número de local</label>\r\n				<input type=\"number\" class=\"form-control local-number\" placeholder=\"Ingrese el número de local\" val=\"";
-  if (helper = helpers.localNumber) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.localNumber); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
-  buffer += escapeExpression(stack1)
-    + "\"/>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<label>Buscar productos</label>\r\n			<input type=\"text\" class=\"form-control find-products\" placeholder=\"Agregar producto\" val=\"";
+  buffer += "<div class=\"container container-local-form background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<h1>Registro de local</h1>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<label>Buscar Local</label>\r\n			<div class=\"input-group\">\r\n		    <input type=\"text\" class=\"form-control input-find-local\" placeholder=\"Ingrese el número de local\">\r\n		    <span class=\"input-group-btn\">\r\n		    <button class=\"btn btn-default button-find-local\" type=\"button\">Go!</button>\r\n		    </span>\r\n		    </div><!-- /input-group -->\r\n			<div class=\"container-fluid container-locals\">\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<label>Buscar productos</label>\r\n			<input type=\"text\" class=\"form-control find-products\" placeholder=\"Agregar producto\" val=\"";
   if (helper = helpers.findProductsQuery) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.findProductsQuery); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -35,7 +31,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/bienvenida.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"container background3 super-container\">\r\n				<div class=\"cosa row\">\r\n					<img src=\"images/tipos.png\" class=\"img-responsive\"/>\r\n				</div>\r\n				<div class=\"cosa row\">\r\n					<div class=\"col-xs-4\">\r\n						XX\r\n					</div>\r\n					<div class=\"col-xs-4\">\r\n						YY\r\n					</div>\r\n					<div class=\"col-xs-4\">\r\n						ZZ\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<label>Agregar Local</label>\r\n				<br/>\r\n				<br/>\r\n				<a href=\"#/locals/new\" class=\"\">\r\n				<span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\r\n				</a>\r\n			</div>\r\n		</li>\r\n	</ul>\r\n</div>";
+  return "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/bienvenida.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/destacadosFull.jpg\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/promocionFull.jpg\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<h2>Tubérculos</h2>\r\n			<img src=\"images/papa.png\" class=\"img-responsive\">\r\n		</li>\r\n	</ul>\r\n</div>";
   });
 
 this["JST"]["newBuyer"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -114,6 +110,32 @@ function program1(depth0,data) {
   stack1 = helpers.each.call(depth0, (depth0 && depth0.locals), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\r\n	</ul>\r\n</div>";
+  return buffer;
+  });
+
+this["JST"]["remoteLocal"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<table class=\"table table-striped\">\r\n      <thead>\r\n        <tr>\r\n          <th>numero</th>\r\n          <th>codigolocal</th>\r\n          <th>aream2</th>\r\n          <th>comercializacion</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr>\r\n          <td>\r\n            ";
+  if (helper = helpers.numero) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.numero); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\r\n          </td>\r\n          <td>\r\n            ";
+  if (helper = helpers.codigolocal) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.codigolocal); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\r\n          </td>\r\n          <td>\r\n            ";
+  if (helper = helpers.aream2) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.aream2); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\r\n          </td>\r\n          <td>\r\n            ";
+  if (helper = helpers.comercializacion) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.comercializacion); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>";
   return buffer;
   });
 

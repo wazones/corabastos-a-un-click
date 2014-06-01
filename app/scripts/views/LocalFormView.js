@@ -7,8 +7,8 @@ define(function(require) {
 		productsAdapter = require('adapters/productsAdapter'),
 
 		localForm = templates['localForm'],
-		productsListTpl = templates['productsList']
-		;
+		remoteLocalTpl = templates['remoteLocal'],
+		productsListTpl = templates['productsList'];
 
 	return Backbone.View.extend({
 		el: '#content',
@@ -20,7 +20,9 @@ define(function(require) {
 
 		events: {
 			'keyup .find-products':'findProducts',
-			'click .row-product' : 'addProductToLocal'
+			'click .row-product' : 'addProductToLocal',
+			'keyup .input-find-local':'findLocalKeyUp',
+			'click .button-find-local':'findLocal'
 			//click a producto
 		},
 
@@ -31,17 +33,33 @@ define(function(require) {
 
 			productsAdapter.findProducts(this.findProductsQuery)
 			.done(function(products){
-				console.log('PRODS:');
-				console.log(products);
-				console.log(productsListTpl());
 				that.$('.container-result').html(productsListTpl({
 					products:products
 				}));
 			});
 		},
-
 		addProductToLocal: function(ev) {
 			alert('TODO: add product to local');
+		},
+
+		findLocal: function() {
+			console.log('Buscando...');
+			var $findLocal = this.$('.input-find-local');
+			var localNumber = $findLocal.val();
+			var result = localsAdapter.findRemoteLocal(localNumber) || false;
+			if(!result) {
+				alert('No se encontraron locales con ese número');
+				$findLocal.val('');
+			}
+			else {
+				this.$('.container-locals').html(remoteLocalTpl(result));
+			}
+			//container-locals
+		},
+		findLocalKeyUp: function(ev) {
+			if(ev.which === 13) {
+				this.findLocal();
+			}
 		}
 	});
 });
