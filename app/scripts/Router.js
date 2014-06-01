@@ -7,7 +7,8 @@ define(function(require) {
 		HomeView = require('views/HomeView'),
 		StatsView = require('views/StatsView'),
 		FirstTimeHomeView = require('views/FirstTimeHomeView'),
-		RegisterMerchantView = require('views/RegisterMerchantView')
+		RegisterMerchantView = require('views/RegisterMerchantView'),
+		LocalFormView = require('views/LocalFormView')
 		;
 
 	return Backbone.Router.extend({
@@ -15,7 +16,7 @@ define(function(require) {
 			'':'home',
 			'register-merchant': 'registerMerchant',
 			'register-buyer': 'registerBuyer',
-			'new-local':'newLocal'
+			'locals/new':'newLocal'
 		},
 		
 		home: function() {
@@ -42,8 +43,8 @@ define(function(require) {
 		},
 
 		newLocal: function() {
-			var newLocalView = new NewLocalView();
-			newLocalView.render();
+			var localView = new LocalFormView();
+			localView.render();
 		}
 
 	});
