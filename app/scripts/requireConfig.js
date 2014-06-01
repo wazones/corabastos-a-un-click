@@ -6,6 +6,7 @@ require.config({
 		handlebars: '../../bower_components/handlebars/handlebars',
 		backbone: '../../bower_components/backbone/backbone',
 		underscore: '../../bower_components/underscore/underscore',
+		openFB: '../../bower_components/OpenFB/openfb',
 		templates: './templates'
 	},
 	shim: {
@@ -22,6 +23,9 @@ require.config({
         },
         underscore: {
             exports: '_'
+        },
+        openFB: {
+        	exports: 'openFB'
         }
 	}
 });

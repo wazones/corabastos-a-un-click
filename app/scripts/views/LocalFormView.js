@@ -19,7 +19,8 @@ define(function(require) {
 		},
 
 		events: {
-			'keyup .find-products':'findProducts'
+			'keyup .find-products':'findProducts',
+			'click .row-product' : 'addProductToLocal'
 			//click a producto
 		},
 
@@ -37,6 +38,10 @@ define(function(require) {
 					products:products
 				}));
 			});
+		},
+
+		addProductToLocal: function(ev) {
+			alert('TODO: add product to local');
 		}
 	});
 });

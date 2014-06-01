@@ -8,16 +8,18 @@ define(function(require) {
 		StatsView = require('views/StatsView'),
 		FirstTimeHomeView = require('views/FirstTimeHomeView'),
 		RegisterMerchantView = require('views/RegisterMerchantView'),
-		LocalFormView = require('views/LocalFormView')
-		;
+		RegisterBuyerView = require('views/RegisterBuyerView'),
+		LocalFormView = require('views/LocalFormView'),
+		NewBuyerView = require('views/NewBuyerView');
 
 	return Backbone.Router.extend({
 		routes: {
 			'':'home',
 			'register-merchant': 'registerMerchant',
-			'register-buyer': 'registerBuyer',
-			'locals/new':'newLocal'
-		},
+			'locals/new':'newLocal',
+			'buyers/register':'registerBuyer',
+			'buyers/new':'newBuyer'
+		},		
 		
 		home: function() {
 			//TODO: replace by a real 'firstTime' registry
@@ -38,13 +40,18 @@ define(function(require) {
 		},
 
 		registerBuyer: function() {
-			var statsView = new StatsView();
-			statsView.render();
+			var registerBuyerView = new RegisterBuyerView();
+			registerBuyerView.render();
 		},
 
 		newLocal: function() {
 			var localView = new LocalFormView();
 			localView.render();
+		},
+
+		newBuyer: function() {
+			var newBuyerView = new NewBuyerView();
+			newBuyerView.render();
 		}
 
 	});
