@@ -31,7 +31,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/bienvenida.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/destacadosFull.jpg\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/promocionFull.jpg\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<h2>Tubérculos</h2>\r\n			<img src=\"images/papa.png\" class=\"img-responsive\">\r\n		</li>\r\n	</ul>\r\n</div>";
+  return "<div class=\"container background2\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/bienvenida.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/destacadosFull.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/promocionFull.png\" class=\"img-responsive\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<h2>Tubérculos</h2>\r\n			<img src=\"images/papa.png\" class=\"img-responsive\">\r\n		</li>\r\n	</ul>\r\n</div>";
   });
 
 this["JST"]["newBuyer"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
