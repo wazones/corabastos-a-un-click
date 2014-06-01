@@ -5,18 +5,12 @@ define(function(require) {
 		templates = require('templates'),
 		localsAdapter = require('adapters/localsAdapter'),
 
-		registerMerchantTpl = templates['registerMerchant'];;
+		localForm = templates['localForm'];
 	return Backbone.View.extend({
 		el: '#content',
 
 		render: function() {
-			var that = this;
-			localsAdapter.findLocals()
-				.done(function(locals) {
-					that.$el.html(registerMerchantTpl({
-						locals: locals
-					}));
-				});
+			that.$el.html(localForm());
 		}
 	});
 });

@@ -11,6 +11,15 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "<div class=\"container container-first-time\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\"></li>\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/logo_corabastos.png\" class=\"img-responsive\"/>\r\n		</li>\r\n\r\n		<li class=\"list-group-item\">\r\n			<a href=\"#/register-buyer\">\r\n				<img src=\"images/boton_comprador.png\" class=\"img-responsive\"/>\r\n			</a>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<a href=\"#/register-merchant\">\r\n				<img src=\"images/boton_comerciante.png\" class=\"img-responsive\"/>\r\n			</a>\r\n		</li>\r\n	</ul>\r\n</div>";
   });
 
+this["JST"]["localForm"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "";
+
+
+  return buffer;
+  });
+
 this["JST"]["navbar"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -23,10 +32,28 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["registerMerchant"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
   
+  var buffer = "", stack1, helper;
+  buffer += "\r\n		<li class=\"list-group-item center-text\">\r\n			<a href=\"#/locals/";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" class=\"\">\r\n			<h1>Local: ";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\r\n			</a>\r\n		</li>\r\n		";
+  return buffer;
+  }
 
-
-  return "<div class=\"container container-register-merchant\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\r\n		</li>\r\n\r\n		<li class=\"list-group-item\">\r\n			<a href=\"#/register-buyer\">\r\n				<img src=\"images/boton_comprador.png\" class=\"img-responsive\"/>\r\n			</a>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<a href=\"#/register-merchant\">\r\n				<img src=\"images/boton_comerciante.png\" class=\"img-responsive\"/>\r\n			</a>\r\n		</li>\r\n	</ul>\r\n</div>";
+  buffer += "<div class=\"container container-register-merchant\">\r\n	<ul class=\"list-group\">\r\n		<li class=\"list-group-item\">\r\n			<img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<form role=\"form\">\r\n				<div class=\"form-group\">\r\n					<label>Nombre de usuario</label>\r\n					<input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\r\n				</div>\r\n			</form>\r\n		</li>\r\n		<li class=\"list-group-item\">\r\n			<div class=\"center-text\">\r\n				<label>Agregar Local</label>\r\n				<br/>\r\n				<br/>\r\n				<a href=\"#/new-local\" class=\"\">\r\n				<span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\r\n				</a>\r\n			</div>\r\n		</li>\r\n		";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.locals), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n	</ul>\r\n</div>";
+  return buffer;
   });
 
 this["JST"]["stats"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

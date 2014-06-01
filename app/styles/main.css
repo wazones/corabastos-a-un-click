@@ -33,7 +33,7 @@ input[type="range"] {
 	background-image:url('images/fondo.png');
 }
 .container-register-merchant {
-	background-image:url('images/home-background.jpg');
+	
 }
 .list-group-item {
 	border:none;
@@ -44,4 +44,14 @@ input[type="range"] {
 	display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.big-icon {
+	-ms-transform: scale(4,4); /* IE 9 */
+	-webkit-transform: scale(4,4); /* Chrome, Safari, Opera */
+	transform: scale(4,4);
+}
+
+.center-text {
+	text-align: center;
 }

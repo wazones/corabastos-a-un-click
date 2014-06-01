@@ -3,16 +3,30 @@
 		<li class="list-group-item">
 			<img src="images/comerciante.png" class="img-circle profile-picture">
 		</li>
-
 		<li class="list-group-item">
-			<a href="#/register-buyer">
-				<img src="images/boton_comprador.png" class="img-responsive"/>
-			</a>
+			<form role="form">
+				<div class="form-group">
+					<label>Nombre de usuario</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su nombre de Usuario">
+				</div>
+			</form>
 		</li>
 		<li class="list-group-item">
-			<a href="#/register-merchant">
-				<img src="images/boton_comerciante.png" class="img-responsive"/>
+			<div class="center-text">
+				<label>Agregar Local</label>
+				<br/>
+				<br/>
+				<a href="#/new-local" class="">
+				<span class="glyphicon glyphicon-plus-sign big-icon"></span>
+				</a>
+			</div>
+		</li>
+		{{#each locals}}
+		<li class="list-group-item center-text">
+			<a href="#/locals/{{id}}" class="">
+			<h1>Local: {{id}}</h1>
 			</a>
 		</li>
+		{{/each}}
 	</ul>
 </div>

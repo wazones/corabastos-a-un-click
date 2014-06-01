@@ -14,7 +14,8 @@ define(function(require) {
 		routes: {
 			'':'home',
 			'register-merchant': 'registerMerchant',
-			'register-buyer': 'registerBuyer'
+			'register-buyer': 'registerBuyer',
+			'new-local':'newLocal'
 		},
 		
 		home: function() {
@@ -38,6 +39,11 @@ define(function(require) {
 		registerBuyer: function() {
 			var statsView = new StatsView();
 			statsView.render();
+		},
+
+		newLocal: function() {
+			var newLocalView = new NewLocalView();
+			newLocalView.render();
 		}
 
 	});
