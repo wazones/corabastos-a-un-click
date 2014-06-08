@@ -26,3 +26,15 @@
    - execute ``grunt build``
 
    - execute ``phonegap run android``
+
+
+
+-----------------------------
+
+###Otros:
+1. Comentarear línea 78 de openFB.js :
+
+``//deferredLogin.reject({error: 'user_cancelled', error_description: 'User cancelled login process', error_reason: "user_cancelled"});``
+
+2. Installar plugin inapp browser ``cordova plugins add org.apache.cordova.inappbrowser``
+

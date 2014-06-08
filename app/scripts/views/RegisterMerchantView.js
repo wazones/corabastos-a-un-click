@@ -17,6 +17,17 @@ define(function(require) {
 						locals: locals
 					}));
 				});
+		},
+
+		events: {
+			'click .button-save': 'saveMerchant'
+		},
+
+		saveMerchant: function(ev) {
+			require(['app'],function(app) {
+				var router = app.getRouter();
+				router.navigate('', {trigger: true});
+			});
 		}
 	});
 });

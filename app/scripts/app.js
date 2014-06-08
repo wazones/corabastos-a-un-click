@@ -21,11 +21,12 @@ define(function(require) {
 			Backbone.history.start();
 		},
 		initFacebook = function() {
+			/*
 			var callbackUrl = 'http://localhost:9000/oauthcallback.html';
 			if(window.phonegap) {
 				callbackUrl = 'https://www.facebook.com/connect/login_success.html';
-			}
-			openFB.init('471881089612398', callbackUrl);
+			}*/
+			openFB.init('471881089612398');//, callbackUrl);
 		},
 		getRouter = function() {
 			return router;

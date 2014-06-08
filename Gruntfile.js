@@ -219,6 +219,11 @@ module.exports = function(grunt) {
                     cwd: '<%= config.app %>/images',
                     src: '{,*/}*.{gif,jpeg,jpg,png}',
                     dest: '<%= config.dist %>/images'
+                },{
+                    expand: true,
+                    cwd: '<%= config.app %>/styles/images',
+                    src: '{,*/}*.{gif,jpeg,jpg,png}',
+                    dest: '<%= config.dist %>/styles/images'
                 }]
             }
         },
@@ -230,6 +235,11 @@ module.exports = function(grunt) {
                     cwd: '<%= config.app %>/images',
                     src: '{,*/}*.svg',
                     dest: '<%= config.dist %>/images'
+                },{
+                    expand: true,
+                    cwd: '<%= config.app %>/styles/images',
+                    src: '{,*/}*.svg',
+                    dest: '<%= config.dist %>/styles/images'
                 }]
             }
         },
@@ -292,9 +302,10 @@ module.exports = function(grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.webp',
+                        'images/{,*/}*.*',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
+                        'styles/images/{,*/}*.*',
                         'config.xml',
                         'res/*',
                         'fonts/*'
@@ -326,7 +337,7 @@ module.exports = function(grunt) {
             ],
             dist: [
                 'copy:styles',
-                'imagemin',
+                //'imagemin',
                 'svgmin'
             ]
         },
@@ -335,9 +346,10 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     baseUrl: '<%= config.app %>/scripts/',
+                    //Must match the comment in index.html "<!-- build:js({app,.tmp}) scripts/requireConfig.js -->"
                     name: 'requireConfig',
                     mainConfigFile: '<%= config.app %>/scripts/requireConfig.js',
-                    out: '.tmp/concat/scripts/app.js'
+                    out: '.tmp/concat/scripts/requireConfig.js'
                 }
             }
         },
@@ -398,7 +410,7 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
-        'rev',
+        //'rev',
         'usemin',
         'htmlmin'
     ]);
