@@ -30,7 +30,7 @@ input[type="range"] {
 	background-size:100% auto;
 }
 .container-first-time {
-	background-image:url('images/fondo.png');
+	background-image:url('../images/fondo.png');
 }
 .container-register-merchant {
 	
@@ -57,13 +57,13 @@ input[type="range"] {
 }
 
 .background2 {
-	background-image:url('images/fondo2.png');
+	background-image:url('../images/fondo2.png');
 	height: 1480px;
 	background-repeat: repeat-x;
 }
 
 .background3 {
-	background-image:url('images/destacados.png');
+	background-image:url('../images/destacados.png');
 	background-repeat: no-repeat;
 	height: 400px;
 }

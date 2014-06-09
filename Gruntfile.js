@@ -324,6 +324,13 @@ module.exports = function(grunt) {
                 cwd: '<%= config.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            images: {
+                expand: true,
+                dot: true,
+                cwd: '<%= config.app %>/images',
+                dest: '.tmp/images/',
+                src: '{,*/}*.*'  
             }
         },
 
