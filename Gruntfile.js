@@ -177,21 +177,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // Renames files for browser caching purposes
-        rev: {
-            dist: {
-                files: {
-                    src: [
-                        '<%= config.dist %>/scripts/{,*/}*.js',
-                        '<%= config.dist %>/styles/{,*/}*.css',
-                        '<%= config.dist %>/images/{,*/}*.*',
-                        '<%= config.dist %>/styles/fonts/{,*/}*.*',
-                        '<%= config.dist %>/*.{ico,png}'
-                    ]
-                }
-            }
-        },
-
         // Reads HTML for usemin blocks to enable smart builds that automatically
         // concat, minify and revision files. Creates configurations in memory so
         // additional tasks can operate on them
@@ -265,32 +250,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // By default, your `index.html`'s <!-- Usemin block --> will take care of
-        // minification. These next options are pre-configured if you do not wish
-        // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= config.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/scripts/scripts.js': [
-        //                 '<%= config.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     dist: {}
-        // },
-
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -353,10 +312,11 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     baseUrl: '<%= config.app %>/scripts/',
-                    //Must match the comment in index.html "<!-- build:js({app,.tmp}) scripts/requireConfig.js -->"
+                    //When minified with usemin, must match the comment in index.html "<!-- build:js({app,.tmp}) scripts/requireConfig.js -->"
                     name: 'requireConfig',
                     mainConfigFile: '<%= config.app %>/scripts/requireConfig.js',
-                    out: '.tmp/concat/scripts/requireConfig.js'
+                    out: '<%= config.dist %>/scripts/requireConfig.js',
+                    optimize: 'none'
                 }
             }
         },
