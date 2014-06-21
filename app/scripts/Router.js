@@ -4,7 +4,6 @@ define(function(require) {
 
 	var $ = require('jquery'),
 		Backbone = require('backbone'),
-		HomeView = require('views/HomeView'),
 		StatsView = require('views/StatsView'),
 		FirstTimeHomeView = require('views/FirstTimeHomeView'),
 		RegisterMerchantView = require('views/RegisterMerchantView'),
