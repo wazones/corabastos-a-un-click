@@ -2,20 +2,20 @@ define(function(require) {
 
 	'use strict';
 
-	var $ = require('jquery'),
-		Backbone = require('backbone'),
+	var Backbone = require('backbone'),
 		StatsView = require('views/StatsView'),
-		FirstTimeHomeView = require('views/FirstTimeHomeView'),
 		RegisterMerchantView = require('views/RegisterMerchantView'),
 		RegisterBuyerView = require('views/RegisterBuyerView'),
 		LocalFormView = require('views/LocalFormView'),
 		NewBuyerView = require('views/NewBuyerView'),
-		MarketDemoView = require('views/MarketDemoView')
+		MarketDemoView = require('views/MarketDemoView'),
+		FirstTimeHandler = require('handlers/FirstTimeHandler')
 		;
 
 	return Backbone.Router.extend({
 		routes: {
 			'':'home',
+			'first-time/:action': 'firstTime',
 			'register-merchant': 'registerMerchant',
 			'locals/new':'newLocal',
 			'buyers/register':'registerBuyer',
@@ -26,15 +26,22 @@ define(function(require) {
 		home: function() {
 			//TODO: replace by a real 'firstTime' registry
 			var firtTime = true;
+			var loggedin = false;
 			if(firtTime) {
-				var firstTimeHomeView = new FirstTimeHomeView();
-				firstTimeHomeView.render();	
+				this.navigate('first-time/home',{trigger:true,replace:true});
+			}
+			else if(loggedin) {
+				//TODO: Do something
 			}
 			else {
 				var homeView = new HomeView();
 				homeView.render();	
 			}
 			
+		},
+		firstTime: function(action) {
+			var firstTimeHandler = new FirstTimeHandler();
+			firstTimeHandler.handle({action:action});
 		},
 		registerMerchant: function() {
 			var registerMerchantView = new RegisterMerchantView();

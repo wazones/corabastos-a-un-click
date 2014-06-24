@@ -7,7 +7,7 @@ define(function(require) {
         Backbone = require('backbone'),
         templates = require('templates'),
 
-        firstTimeHome = templates['firstTimeHome'];
+        firstTimeHome = templates['firstTime.home'];
 
 
     return Backbone.View.extend({

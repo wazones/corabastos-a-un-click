@@ -2,13 +2,31 @@ define(['handlebars'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
-this["JST"]["firstTimeHome"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["firstTime.home"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\"></li>\n		<li class=\"list-group-item\">\n			<img src=\"images/logo_corabastos.png\" class=\"img-responsive\"/>\n		</li>\n\n		<li class=\"list-group-item\">\n			<a href=\"#/buyers/register\">\n				<img src=\"images/boton_comprador.png\" class=\"img-responsive\"/>\n			</a>\n		</li>\n		<li class=\"list-group-item\">\n			<a href=\"#/register-merchant\">\n				<img src=\"images/boton_comerciante.png\" class=\"img-responsive\"/>\n			</a>\n		</li>\n	</ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\"></li>\n		<li class=\"list-group-item\">\n			<a href=\"#/first-time/signup\">\n				<button class=\"btn btn-default\">Soy Nuevo</button>\n			</a>\n		</li>\n		<li class=\"list-group-item\">\n			<a href=\"#/first-time/login\">\n				<button class=\"btn btn-default\">Iniciar sesión</button>\n			</a>\n		</li>\n	</ul>\n</div>";
+  });
+
+this["JST"]["firstTime.login"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\">\n			<form role=\"form\">\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputEmail1\">Email</label>\n			    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n			  </div>\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputPassword1\">Contraseña</label>\n			    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Contraseña\">\n			  </div>  \n			  <button type=\"submit\" class=\"btn btn-default\">Iniciar sesión</button>\n			</form>\n		</li>\n	</ul>\n</div>";
+  });
+
+this["JST"]["firstTime.signup"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li>\n			<h1>Signup</h1>\n		</li>\n		<li class=\"list-group-item\">\n			<form role=\"form\">\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputEmail1\">Email</label>\n			    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n			  </div>\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputPassword1\">Contraseña</label>\n			    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Contraseña\">\n			  </div>  \n			  <button type=\"submit\" class=\"btn btn-default\">Iniciar sesión</button>\n			</form>\n		</li>\n	</ul>\n</div>";
   });
 
 this["JST"]["localForm"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -137,15 +155,6 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack1)
     + "\n          </td>\n        </tr>\n      </tbody>\n    </table>";
   return buffer;
-  });
-
-this["JST"]["stats"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
-
-
-  return "<h1 class=\"main-question\">\n	Aquí se van a ver las estadísticas :D\n</h1>\n<div>\n|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*<br>\n|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*<br>\n|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*<br>\n|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*<br>\n|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*<br>\n|&nbsp&nbsp&nbsp&nbsp*<br>\n|*<br>\n------------------------------------\n</div>";
   });
 
 return this["JST"];
