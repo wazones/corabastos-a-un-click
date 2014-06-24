@@ -3,7 +3,6 @@ define(function(require) {
 	'use strict';
 
 	var Backbone = require('backbone'),
-		StatsView = require('views/StatsView'),
 		RegisterMerchantView = require('views/RegisterMerchantView'),
 		RegisterBuyerView = require('views/RegisterBuyerView'),
 		LocalFormView = require('views/LocalFormView'),

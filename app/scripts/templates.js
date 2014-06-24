@@ -26,7 +26,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li>\n			<h1>Signup</h1>\n		</li>\n		<li class=\"list-group-item\">\n			<form role=\"form\">\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputEmail1\">Email</label>\n			    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n			  </div>\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputPassword1\">Contraseña</label>\n			    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Contraseña\">\n			  </div>  \n			  <button type=\"submit\" class=\"btn btn-default\">Iniciar sesión</button>\n			</form>\n		</li>\n	</ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li>\n			<h1>Usuario Nuevo</h1>\n		</li>\n		<li class=\"list-group-item\">\n			<form role=\"form\">\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputEmail1\">Email</label>\n			    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n			  </div>\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputPassword1\">Contraseña</label>\n			    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Contraseña\">\n			  </div>  \n			  <button type=\"submit\" class=\"btn btn-default\">Iniciar sesión</button>\n			</form>\n		</li>\n	</ul>\n</div>";
   });
 
 this["JST"]["localForm"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
