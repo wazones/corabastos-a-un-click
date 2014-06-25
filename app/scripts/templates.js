@@ -8,7 +8,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\"></li>\n		<li class=\"list-group-item\">\n			<a href=\"#/first-time/signup\">\n				<button class=\"btn btn-default\">Soy Nuevo</button>\n			</a>\n		</li>\n		<li class=\"list-group-item\">\n			<a href=\"#/first-time/login\">\n				<button class=\"btn btn-default\">Iniciar sesión</button>\n			</a>\n		</li>\n	</ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\"></li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/signup\">\n        <button class=\"btn btn-default\">Soy Nuevo</button>\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/login\">\n        <button class=\"btn btn-default\">Iniciar sesión</button>\n      </a>\n    </li>\n  </ul>\n</div>";
   });
 
 this["JST"]["firstTime.login"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -17,7 +17,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\">\n			<form role=\"form\">\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputEmail1\">Email</label>\n			    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n			  </div>\n			  <div class=\"form-group\">\n			    <label for=\"exampleInputPassword1\">Contraseña</label>\n			    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Contraseña\">\n			  </div>  \n			  <button type=\"submit\" class=\"btn btn-default\">Iniciar sesión</button>\n			</form>\n		</li>\n	</ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label for=\"exampleInputEmail1\">Email</label>\n          <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"exampleInputPassword1\">Contraseña</label>\n          <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Contraseña\">\n        </div>  \n        <button type=\"submit\" class=\"btn btn-default\">Iniciar sesión</button>\n      </form>\n    </li>\n  </ul>\n</div>";
   });
 
 this["JST"]["firstTime.signup"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -26,7 +26,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li>\n      <h1>Usuario Nuevo</h1>\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <label>Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Contraseña\">\n        </div>  \n        <div class=\"form-group\">\n          <label>Repetir Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Repetir Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Télefono de contacto</label>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Teléfono de contacto\">\n        </div>\n        <div class=\"form-group\">\n          <label>Foto de perfil</label>\n          <input type=\"file\">\n          <p class=\"help-block\">Suba una foto para que sus clientes lo identifiquen fácilmente.</p>\n        </div>\n        <button type=\"submit\" class=\"btn btn-default\">Registrarse</button>\n      </form>\n    </li>\n  </ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li>\n      <h1>Usuario Nuevo</h1>\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <label>Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Repetir Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Repetir Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Télefono de contacto</label>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Teléfono de contacto\">\n        </div>\n        <div class=\"form-group\">\n          <label>Foto de perfil</label>\n          <input type=\"file\">\n          <p class=\"help-block\">Suba una foto para que sus clientes lo identifiquen fácilmente.</p>\n        </div>\n        <div class=\"form-group\">\n          <label>Tipo de usuario</label>\n          <div class=\"btn-group\" data-toggle=\"buttons\">\n            <label class=\"btn btn-primary active\">\n              <input type=\"radio\" name=\"options\" id=\"option1\"/>\n              Comprador\n            </label>\n            <label class=\"btn btn-primary\">\n              <input type=\"radio\" name=\"options\" id=\"option2\"/>Comerciante\n            </label>\n          </div>\n        </div>\n        <button type=\"submit\" class=\"btn btn-default\">Registrarse</button>\n      </form>\n    </li>\n  </ul>\n</div>";
   });
 
 this["JST"]["localForm"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -50,6 +50,33 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
 
   return "<div class=\"container background2\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\">\n			<img src=\"images/bienvenida.png\" class=\"img-responsive\">\n		</li>\n		<li class=\"list-group-item\">\n			<img src=\"images/destacadosFull.png\" class=\"img-responsive\">\n		</li>\n		<li class=\"list-group-item\">\n			<img src=\"images/promocionFull.png\" class=\"img-responsive\">\n		</li>\n		<li class=\"list-group-item\">\n			<h2>Tubérculos</h2>\n			<img src=\"images/papa.png\" class=\"img-responsive\">\n		</li>\n	</ul>\n</div>";
+  });
+
+this["JST"]["merchants.profile"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n    <li class=\"list-group-item center-text\">\n      <a href=\"#/locals/";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" class=\"\">\n      <h1>Local: ";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\n      </a>\n    </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"container container-register-merchant background2\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">\n      <button type=\"button\" class=\"btn btn-success button-save\">Guardar</button>\n    </li>\n    <li class=\"list-group-item\">\n      <img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Nombre de usuario</label>\n          <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\n        </div>\n      </form>\n    </li>\n    <li class=\"list-group-item\">\n      <div class=\"center-text\">\n        <label>Agregar Local</label>\n        <br/>\n        <br/>\n        <a href=\"#/locals/new\" class=\"\">\n        <span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\n        </a>\n      </div>\n    </li>\n    ";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.locals), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n  </ul>\n</div>";
+  return buffer;
   });
 
 this["JST"]["newBuyer"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -112,22 +139,22 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n		<li class=\"list-group-item center-text\">\n			<a href=\"#/locals/";
+  buffer += "\n    <li class=\"list-group-item center-text\">\n      <a href=\"#/locals/";
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" class=\"\">\n			<h1>Local: ";
+    + "\" class=\"\">\n        <h1>Local: ";
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h1>\n			</a>\n		</li>\n		";
+    + "</h1>\n      </a>\n    </li>\n    ";
   return buffer;
   }
 
-  buffer += "<div class=\"container container-register-merchant background2\">\n	<ul class=\"list-group\">\n		<li class=\"list-group-item\">\n			<button type=\"button\" class=\"btn btn-success button-save\">Guardar</button>\n		</li>\n		<li class=\"list-group-item\">\n			<img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\n		</li>\n		<li class=\"list-group-item\">\n			<form role=\"form\">\n				<div class=\"form-group\">\n					<label>Nombre de usuario</label>\n					<input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\n				</div>\n			</form>\n		</li>\n		<li class=\"list-group-item\">\n			<div class=\"center-text\">\n				<label>Agregar Local</label>\n				<br/>\n				<br/>\n				<a href=\"#/locals/new\" class=\"\">\n				<span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\n				</a>\n			</div>\n		</li>\n		";
+  buffer += "<div class=\"container container-register-merchant background2\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">\n      <button type=\"button\" class=\"btn btn-success button-save\">Guardar</button>\n    </li>\n    <li class=\"list-group-item\">\n      <img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Nombre de usuario</label>\n          <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\n        </div>\n      </form>\n    </li>\n    <li class=\"list-group-item\">\n      <div class=\"center-text\">\n        <label>Agregar Local</label>\n        <br/>\n        <br/>\n        <a href=\"#/locals/new\" class=\"\">\n          <span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\n        </a>\n      </div>\n    </li>\n    ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.locals), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n	</ul>\n</div>";
+  buffer += "\n  </ul>\n</div>";
   return buffer;
   });
 
