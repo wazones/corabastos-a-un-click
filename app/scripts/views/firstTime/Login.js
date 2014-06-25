@@ -17,7 +17,6 @@ define(function(require) {
       'click button[type=submit]': 'submitForm'
     },
     submitForm: function(ev) {
-      console.log('Form submission');
       ev.preventDefault();
       require(['app'],function(app) {
         var router = app.getRouter();

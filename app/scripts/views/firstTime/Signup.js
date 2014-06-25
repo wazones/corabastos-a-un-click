@@ -8,19 +8,28 @@ define(function(require) {
 
   //TODO: add validations to form
   return Backbone.View.extend({
-    el: '#content',
+    el: '<div/>',
     render: function() {
       this.$el.html(firstTimeHome());
+      $('#content').html(this.$el);
     },
     events: {
       'click button[type=submit]': 'submitForm'
     },
     submitForm: function(ev) {
-      console.log('Form submission');
       ev.preventDefault();
+      var userType = this.$('.user-type-select label.active input')
+        .first().data('user-type');
       require(['app'],function(app) {
         var router = app.getRouter();
-        router.navigate('merchants/profile',{trigger:true,replace:true});
+        switch(userType) {
+          case 'merchant':
+            router.navigate('/merchants/profile',{trigger:true,replace:true});
+          break;
+          case 'buyer':
+            router.navigate('/buyers/profile',{trigger:true,replace:true});
+          break;
+        }
       });
     }
 
