@@ -2,13 +2,22 @@ define(['handlebars'], function(Handlebars) {
 
 this["JST"] = this["JST"] || {};
 
+this["JST"]["buyers.profile"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"container container-register-merchant background2\">\n  <h1>Perfil de comprador</h1>\n  <h2>En construcción</h2>\n</div>";
+  });
+
 this["JST"]["firstTime.home"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\"></li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/signup\">\n        <button class=\"btn btn-default\">Soy Nuevo</button>\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/login\">\n        <button class=\"btn btn-default\">Iniciar sesión</button>\n      </a>\n    </li>\n  </ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\"></li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/signup\" class=\"btn btn-primary btn-lg\">\n        Soy Nuevo\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/login\" class=\"btn btn-primary btn-lg\">\n        Iniciar sesión\n      </a>\n    </li>\n  </ul>\n</div>";
   });
 
 this["JST"]["firstTime.login"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -26,7 +35,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li>\n      <h1>Usuario Nuevo</h1>\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <label>Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Repetir Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Repetir Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Télefono de contacto</label>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Teléfono de contacto\">\n        </div>\n        <div class=\"form-group\">\n          <label>Foto de perfil</label>\n          <input type=\"file\">\n          <p class=\"help-block\">Suba una foto para que sus clientes lo identifiquen fácilmente.</p>\n        </div>\n        <div class=\"form-group\">\n          <label>Tipo de usuario</label>\n          <div class=\"user-type-select btn-group\" data-toggle=\"buttons\">\n            <label class=\"btn btn-primary active\">\n              <input type=\"radio\" name=\"options\" data-user-type=\"buyer\"/>\n              Comprador\n            </label>\n            <label class=\"btn btn-primary\">\n              <input type=\"radio\" name=\"options\" data-user-type=\"merchant\"/>\n              Comerciante\n            </label>\n          </div>\n        </div>\n        <button type=\"submit\" class=\"btn btn-default\">Registrarse</button>\n      </form>\n    </li>\n  </ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li>\n      <h1>Usuario Nuevo</h1>\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <label>Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Repetir Contraseña</label>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Repetir Contraseña\">\n        </div>\n        <div class=\"form-group\">\n          <label>Télefono de contacto</label>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Teléfono de contacto\">\n        </div>\n        <div class=\"form-group\">\n          <label>Foto de perfil</label>\n          <input type=\"file\">\n        </div>\n        <div class=\"form-group\">\n          <label>Tipo de usuario</label>\n          <div class=\"user-type-select btn-group\" data-toggle=\"buttons\">\n            <label class=\"btn btn-primary active\">\n              <input type=\"radio\" name=\"options\" data-user-type=\"buyer\"/>\n              Comprador\n            </label>\n            <label class=\"btn btn-primary\">\n              <input type=\"radio\" name=\"options\" data-user-type=\"merchant\"/>\n              Comerciante\n            </label>\n          </div>\n        </div>\n        <button type=\"submit\" class=\"btn btn-default\">Registrarse</button>\n      </form>\n    </li>\n  </ul>\n</div>";
   });
 
 this["JST"]["localForm"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

@@ -2,15 +2,16 @@ define(function(require) {
 
   'use strict';
 
-  var Backbone = require('backbone'),
+  var $ = require('jquery'),
+    Backbone = require('backbone'),
     templates = require('templates'),
-    merchantsProfileTpl = templates['merchants.profile'];
+    buyersProfileTpl = templates['buyers.profile'];
 
 
   return Backbone.View.extend({
     el: '<div/>',
-    render: function() {            
-      this.$el.html(merchantsProfileTpl());
+    render: function() {
+      this.$el.html(buyersProfileTpl());
       $('#content').html(this.$el);
     }
   });

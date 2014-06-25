@@ -9,7 +9,8 @@ define(function(require) {
     NewBuyerView = require('views/NewBuyerView'),
     MarketDemoView = require('views/MarketDemoView'),
     FirstTimeHandler = require('handlers/FirstTimeHandler'),
-    MerchantsHandler = require('handlers/MerchantsHandler')
+    MerchantsHandler = require('handlers/MerchantsHandler'),
+    BuyersHandler = require('handlers/BuyersHandler')
     ;
 
   return Backbone.Router.extend({
@@ -17,6 +18,7 @@ define(function(require) {
       '':'home',
       'first-time/:action': 'firstTime',
       'merchants/:action': 'merchants',
+      'buyers/:action': 'buyers',
       
       'register-merchant': 'registerMerchant',
       'locals/new':'newLocal',
@@ -45,6 +47,12 @@ define(function(require) {
       var merchantsHandler = new MerchantsHandler();
       merchantsHandler.handle({action:action});
     },
+    buyers: function(action) {
+      var buyersHandler = new BuyersHandler();
+      buyersHandler.handle({action:action});
+    },
+
+
     registerMerchant: function() {
       var registerMerchantView = new RegisterMerchantView();
       registerMerchantView.render();
