@@ -389,6 +389,7 @@ module.exports = function(grunt) {
   ]);
 
   /** Custom tasks **/
+  grunt.registerTask('heroku',['build']);
 
   //Load Requirejs task
   grunt.loadNpmTasks('grunt-requirejs');
