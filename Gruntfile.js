@@ -290,6 +290,14 @@ module.exports = function(grunt) {
         cwd: '<%= config.app %>/images',
         dest: '.tmp/images/',
         src: '{,*/}*.*'  
+      },
+      heroku: {
+        files: [{
+            expand: true,
+            src: ['www/**','app.js','Procfile','package.json'], 
+            dest: 'dist/'
+          }
+        ]
       }
     },
 
@@ -389,7 +397,7 @@ module.exports = function(grunt) {
   ]);
 
   /** Custom tasks **/
-  grunt.registerTask('heroku',['build']);
+  grunt.registerTask('heroku',['build','copy:heroku']);
 
   //Load Requirejs task
   grunt.loadNpmTasks('grunt-requirejs');
