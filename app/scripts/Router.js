@@ -4,8 +4,9 @@ define(function(require) {
 
   var Backbone = require('backbone'),
     FirstTimeHandler = require('handlers/FirstTimeHandler'),
-    MerchantsHandler = require('handlers/MerchantsHandler'),
-    BuyersHandler = require('handlers/BuyersHandler')
+    BuyersHandler = require('handlers/BuyersHandler'),
+    MerchantsHandler = require('handlers/MerchantsHandler')
+
     ;
 
   return Backbone.Router.extend({

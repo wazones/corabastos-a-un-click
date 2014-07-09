@@ -65,6 +65,10 @@ module.exports = function(grunt) {
       handlebars: {
         files: ['app/templates/**/*.hbs'],
         tasks: ['handlebars']
+      },
+      coffee: {
+        files:['app/scripts/**/*.coffee'],
+        tasks:['coffee:compile']
       }
     },
 
@@ -289,12 +293,12 @@ module.exports = function(grunt) {
         dot: true,
         cwd: '<%= config.app %>/images',
         dest: '.tmp/images/',
-        src: '{,*/}*.*'  
+        src: '{,*/}*.*'
       },
       heroku: {
         files: [{
             expand: true,
-            src: ['www/**','app.js','Procfile','package.json'], 
+            src: ['www/**','app.js','Procfile','package.json'],
             dest: 'dist/'
           }
         ]
@@ -341,6 +345,18 @@ module.exports = function(grunt) {
           'app/scripts/templates.js': ['app/templates/**/*.hbs']
         }
       }
+    },
+    coffee: {
+      compile: {
+        options: {
+          bare: true
+        },
+        expand: true,
+        cwd: 'app/scripts',
+        src: ['**/*.coffee'],
+        dest: 'app/scripts',
+        ext: '.js'
+      }
     }
   });
 
@@ -376,6 +392,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'coffee:compile',
     'handlebars',
     'useminPrepare',
     'concurrent:dist',
@@ -398,11 +415,5 @@ module.exports = function(grunt) {
 
   /** Custom tasks **/
   grunt.registerTask('heroku',['build','copy:heroku']);
-
-  //Load Requirejs task
-  grunt.loadNpmTasks('grunt-requirejs');
-
-  //Handlebars
-  grunt.loadNpmTasks('grunt-contrib-handlebars');
 
 };

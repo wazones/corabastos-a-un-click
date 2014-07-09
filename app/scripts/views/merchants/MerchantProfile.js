@@ -9,7 +9,7 @@ define(function(require) {
 
   return Backbone.View.extend({
     el: '<div/>',
-    render: function() {            
+    render: function() {
       this.$el.html(merchantsProfileTpl());
       $('#content').html(this.$el);
     }
