@@ -17,7 +17,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\"></li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/signup\" class=\"btn btn-primary btn-lg\">\n        Soy Nuevo\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/login\" class=\"btn btn-primary btn-lg\">\n        Iniciar sesión\n      </a>\n    </li>\n  </ul>\n</div>";
+  return "<div class=\"container container-first-time\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\"></li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/signup\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        Soy Nuevo\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#first-time/login\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        Iniciar sesión\n      </a>\n    </li>\n  </ul>\n</div>";
   });
 
 this["JST"]["firstTime.login"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -69,7 +69,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n    <li class=\"list-group-item center-text\">\n      <a href=\"#/locals/";
+  buffer += "\n    <li class=\"list-group-item center-text\">\n      <a href=\"#/stores/";
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -81,8 +81,12 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"container container-register-merchant background2\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">\n      <button type=\"button\" class=\"btn btn-success button-save\">Guardar</button>\n    </li>\n    <li class=\"list-group-item\">\n      <img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\n    </li>\n    <li class=\"list-group-item\">\n      <form role=\"form\">\n        <div class=\"form-group\">\n          <label>Nombre de usuario</label>\n          <input type=\"text\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Ingrese su nombre de Usuario\">\n        </div>\n      </form>\n    </li>\n    <li class=\"list-group-item\">\n      <div class=\"center-text\">\n        <label>Agregar Local</label>\n        <br/>\n        <br/>\n        <a href=\"#/locals/new\" class=\"\">\n        <span class=\"glyphicon glyphicon-plus-sign big-icon\"></span>\n        </a>\n      </div>\n    </li>\n    ";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.locals), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  buffer += "<div class=\"container container-register-merchant background2\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">\n      <button type=\"button\" class=\"btn btn-success button-save\">Guardar</button>\n    </li>\n    <li class=\"list-group-item\">\n      <img src=\"images/comerciante.png\" class=\"img-circle profile-picture\">\n    </li>\n    <li class=\"list-group-item\">\n      <!-- Username -->\n      <div class=\"form-group\">\n        <label>Nombre de usuario</label>\n        <input type=\"text\" class=\"form-control\" readonly=\"true\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.merchant)),stack1 == null || stack1 === false ? stack1 : stack1.user)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n      </div>\n      <!-- Phone number -->\n      <div class=\"form-group\">\n        <label>Teléfono</label>\n        <input type=\"text\" class=\"form-control\" readonly=\"true\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.merchant)),stack1 == null || stack1 === false ? stack1 : stack1.phone)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n      </div>\n    </li>\n\n    <li class=\"list-group-item\">\n      <a href=\"/#stores/new\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        + Agregar Local\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#offers/new\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        + Agregar Oferta\n      </a>\n    </li>\n\n    ";
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.merchant)),stack1 == null || stack1 === false ? stack1 : stack1.stores), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n  </ul>\n</div>";
   return buffer;

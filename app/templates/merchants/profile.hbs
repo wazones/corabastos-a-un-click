@@ -7,26 +7,32 @@
       <img src="images/comerciante.png" class="img-circle profile-picture">
     </li>
     <li class="list-group-item">
-      <form role="form">
-        <div class="form-group">
-          <label>Nombre de usuario</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su nombre de Usuario">
-        </div>
-      </form>
-    </li>
-    <li class="list-group-item">
-      <div class="center-text">
-        <label>Agregar Local</label>
-        <br/>
-        <br/>
-        <a href="#/locals/new" class="">
-        <span class="glyphicon glyphicon-plus-sign big-icon"></span>
-        </a>
+      <!-- Username -->
+      <div class="form-group">
+        <label>Nombre de usuario</label>
+        <input type="text" class="form-control" readonly="true" value="{{merchant.user}}">
+      </div>
+      <!-- Phone number -->
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="text" class="form-control" readonly="true" value="{{merchant.phone}}">
       </div>
     </li>
-    {{#each locals}}
+
+    <li class="list-group-item">
+      <a href="/#stores/new" class="btn btn-primary btn-lg btn-group-justified">
+        + Agregar Local
+      </a>
+    </li>
+    <li class="list-group-item">
+      <a href="/#offers/new" class="btn btn-primary btn-lg btn-group-justified">
+        + Agregar Oferta
+      </a>
+    </li>
+
+    {{#each merchant.stores}}
     <li class="list-group-item center-text">
-      <a href="#/locals/{{id}}" class="">
+      <a href="#/stores/{{id}}" class="">
       <h1>Local: {{id}}</h1>
       </a>
     </li>
