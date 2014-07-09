@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         tasks: ['handlebars']
       },
       coffee: {
-        files:['app/scripts/**/*.coffee'],
+        files:['app/coffee/**/*.coffee'],
         tasks:['coffee:compile']
       }
     },
@@ -352,7 +352,7 @@ module.exports = function(grunt) {
           bare: true
         },
         expand: true,
-        cwd: 'app/scripts',
+        cwd: 'app/coffee',
         src: ['**/*.coffee'],
         dest: 'app/scripts',
         ext: '.js'
@@ -368,6 +368,7 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
+      'build',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
