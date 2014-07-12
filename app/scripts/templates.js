@@ -85,7 +85,7 @@ function program1(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.merchant)),stack1 == null || stack1 === false ? stack1 : stack1.user)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">\n      </div>\n      <!-- Phone number -->\n      <div class=\"form-group\">\n        <label>Teléfono</label>\n        <input type=\"text\" class=\"form-control\" readonly=\"true\" value=\""
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.merchant)),stack1 == null || stack1 === false ? stack1 : stack1.phone)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n      </div>\n    </li>\n\n    <li class=\"list-group-item\">\n      <a href=\"/#stores/new\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        + Agregar Local\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#offers/new\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        + Agregar Oferta\n      </a>\n    </li>\n\n    ";
+    + "\">\n      </div>\n    </li>\n\n    <li class=\"list-group-item\">\n      <a href=\"/#stores/create\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        + Agregar Local\n      </a>\n    </li>\n    <li class=\"list-group-item\">\n      <a href=\"/#offers/create\" class=\"btn btn-primary btn-lg btn-group-justified\">\n        + Agregar Oferta\n      </a>\n    </li>\n\n    ";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.merchant)),stack1 == null || stack1 === false ? stack1 : stack1.stores), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n  </ul>\n</div>";
@@ -195,6 +195,15 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack1)
     + "\n          </td>\n        </tr>\n      </tbody>\n    </table>";
   return buffer;
+  });
+
+this["JST"]["stores.create"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"container container-register-merchant background2\">\n  <h1>TODO</h1>\n</div>";
   });
 
 return this["JST"];

@@ -2,23 +2,24 @@ define (require)->
 
   Backbone = require "backbone"
   templates = require "templates"
-  MerchantModel = require "models/Merchant"
-  merchantsProfileTpl = templates["merchants.profile"]
+  Store = require "models/Store"
+  Tpl = templates["stores.create"]
 
-  class MerchantProfile extends Backbone.View
+  class CreateStoreView  extends Backbone.View
     el: "<div/>"
 
     initialize : ()->
+      if not @.model?
+        @.model = new Store()
+
       @.listenTo(@.model, "change", @.render)
       @.model.fetch()
       return
 
     render : ()->
-      tpl = merchantsProfileTpl
-        merchant : @.model.toJSON()
-
+      tpl = Tpl()
       @.$el.html(tpl)
       $("#content").html(@.$el)
       return
 
-  return MerchantProfile
+  return CreateStoreView

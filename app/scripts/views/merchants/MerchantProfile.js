@@ -5,7 +5,7 @@ define(function(require) {
   var Backbone, MerchantModel, MerchantProfile, merchantsProfileTpl, templates;
   Backbone = require("backbone");
   templates = require("templates");
-  MerchantModel = require("models/MerchantModel");
+  MerchantModel = require("models/Merchant");
   merchantsProfileTpl = templates["merchants.profile"];
   MerchantProfile = (function(_super) {
     __extends(MerchantProfile, _super);

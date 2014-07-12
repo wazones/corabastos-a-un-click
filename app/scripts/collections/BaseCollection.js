@@ -15,6 +15,11 @@ define(function(require) {
       return "https://corabastos-a-un-click-backend.herokuapp.com";
     };
 
+    BaseCollection.prototype.sync = function(method, model, options) {
+      options.dataType = "json";
+      return Backbone.sync(method, model, options);
+    };
+
     return BaseCollection;
 
   })(Backbone.Collection);

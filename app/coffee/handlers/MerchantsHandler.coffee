@@ -7,6 +7,7 @@ define (require) ->
 
   class MerchantsHandler extends Handler
     profile : ->
+      # TODO: retrieve merchant from session
       merchant = new Merchant({id:1})
       profile = new MerchantProfile({model:merchant})
       return
